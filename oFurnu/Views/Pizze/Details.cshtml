@@ -1,0 +1,65 @@
+﻿@model oFurnu.Models.Pizze
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Dettagli Pizza</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Pizze</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prezzo)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Prezzo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tempo_Consegna)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Tempo_Consegna)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ingredienti)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Ingredienti)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Immagine)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Immagine)
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-md-6">
+            <label for="numero">Inserisci un numero:</label>
+            <input type="number" name="numero" id="numero" min="0" max="100" placeholder="Inserisci un numero tra 0 e 100" class="form-control mb-3">
+
+            <div class="text-center">
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Pizza }, new { @class = "btn btn-primary mr-2" })
+                    @Html.ActionLink("Ordina", "Ordina", new { id = Model.ID_Pizza }, new { @class = "btn btn-success mr-2" })
+                    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-secondary" })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

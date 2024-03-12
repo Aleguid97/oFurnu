@@ -1,0 +1,31 @@
+﻿<main>
+    <section class="row" aria-labelledby="pizzaTitle">
+        <h1 id="pizzaTitle">Pizzeria O'Furnu'</h1>
+        <p class="lead">Benvenuti alla Pizzeria O'Furnu, dove l'arte della pizza incontra la passione culinaria autentica.</p>
+    </section>
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="pizzaMenuTitle">
+            <h2 id="pizzaMenuTitle">Il Nostro Menu</h2>
+            <p>Esplorate una vasta selezione di pizze artigianali, realizzate con ingredienti freschi e genuini.</p>
+            
+            @Html.ActionLink("Scopri il menu", "Index", "Pizze", null, new { @class = "btn btn-outline-dark btn-md" })
+        </section>
+        <section class="col-md-4" aria-labelledby="specialsTitle">
+            <h2 id="specialsTitle">Pizze Senza Glutine</h2>
+            <p>Scoprite le nostre pizze senza glutine.
+            Ideata dal nostro pizzaiolo per rendere inalterato il piacere della pizza.</p>
+           
+            <img src="~/Content/Immagini/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="Immagine delle offerte speciali" class="img rounded-circle shadow" width="310" height="310">
+        </section>
+        <section class="col-md-4" aria-labelledby="visitUsTitle">
+            <h2 id="visitUsTitle">Vieni a Trovarci</h2>
+            <p>Vi aspettiamo nel nostro accogliente ristorante. Assaporate l'autentica esperienza della pizza con noi.</p>
+            <!-- Incorpora la mappa di Google Maps -->
+            <div style="width:100%;height:300px;overflow:hidden;">
+                <!-- Incolla il codice HTML generato da Google Maps qui -->
+                <!-- Esempio -->
+                <iframe  class="rounded-circle h-100 w-75 shadow mt-n2 justify-content-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428426.51629196544!2d96.69023445827793!3d32.975234149496245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x370929289ee0ca23%3A0x2e0763b2726034eb!2sYushu%2C%20Qinghai%2C%20Cina!5e0!3m2!1sit!2sit!4v1710193676181!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+</main>

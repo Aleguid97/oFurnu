@@ -1,0 +1,41 @@
+﻿@model oFurnu.Models.Clienti
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Dettagli Cliente</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-3 font-weight-bold">Nome:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Nome)</div>
+
+        <div class="col-sm-3 font-weight-bold">Cognome:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Cognome)</div>
+
+        <div class="col-sm-3 font-weight-bold">Indirizzo:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Indirizzo)</div>
+
+        <div class="col-sm-3 font-weight-bold">Città:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Citta)</div>
+
+        <div class="col-sm-3 font-weight-bold">CAP:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.CAP)</div>
+
+        <div class="col-sm-3 font-weight-bold">Email:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Email)</div>
+
+        <div class="col-sm-3 font-weight-bold">Password:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Password)</div>
+
+        <div class="col-sm-3 font-weight-bold">Ruolo:</div>
+        <div class="col-sm-9">@Html.DisplayFor(model => model.Ruolo)</div>
+    </div>
+</div>
+
+<div class="container mt-3 text-center">
+    @Html.ActionLink("Modifica", "Edit", new { id = Model.ID_Cliente }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Torna alla Lista", "Index", new { @class = "btn btn-secondary" })
+</div>

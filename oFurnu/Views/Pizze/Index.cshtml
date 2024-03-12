@@ -1,0 +1,45 @@
+﻿@model IEnumerable<oFurnu.Models.Pizze>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Scegli La Tua Pizza</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card">
+                <img src="@Html.DisplayFor(modelItem => item.Immagine)" class="card-img-top" alt="@item.Nome Image">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nome)</h5>
+                    <p class="card-text">
+                        <span class="Prezzo">€ @Html.DisplayFor(modelItem => item.Prezzo)</span>
+                        <br>
+                        <span class="Tempo_Consegna">Delivery: @Html.DisplayFor(modelItem => item.Tempo_Consegna) minutes</span>
+                        <br />
+                        <span> Ingredienti: @Html.DisplayFor(modelItem => item.Ingredienti) </span>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group mr-2">
+                        @Html.ActionLink("Details", "Details", new { id = item.ID_Pizza }, new { @class = "btn btn-outline-dark" })
+                    </div>
+                    <div class="btn-group mr-2">
+                        @Html.ActionLink("Order Now", "Edit", new { id = item.ID_Pizza }, new { @class = "btn btn-outline-primary" })
+
+                        <form class="form-inline ms-4">
+                            <input type="number" name="numero" id="numero" min="0" max="100" class="form-control-sm mb-2">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>}
+</div>
+
